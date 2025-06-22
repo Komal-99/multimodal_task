@@ -81,8 +81,7 @@ class EnhancedMultimodalQuerySystem:
         
         except Exception as e:
             logger.error(f"Error loading document {doc_id}: {e}")
-            return None
-        
+            return None   
     
     def query(self, query_text: str, top_k: int = 5, 
               doc_ids: Optional[List[str]] = None,
@@ -369,25 +368,4 @@ class EnhancedMultimodalQuerySystem:
         logger.info(f"Loaded {len(multimedia['images'])} relevant images and {len(multimedia['tables'])} relevant tables")
         
         return multimedia
-
-
-    def clear_document_cache(self, doc_id: Optional[str] = None):
-        """Clear loaded document cache"""
-        if doc_id:
-            if doc_id in self.loaded_documents:
-                del self.loaded_documents[doc_id]
-                logger.info(f"Cleared cache for document {doc_id}")
-        else:
-            self.loaded_documents.clear()
-            logger.info("Cleared all document cache")
-    
-    def get_cache_info(self) -> Dict[str, Any]:
-        """Get information about cached documents"""
-        return {
-            'cached_documents': list(self.loaded_documents.keys()),
-            'cache_count': len(self.loaded_documents),
-            'memory_usage': f"{len(self.loaded_documents)} documents in memory"
-        }
-
-
 

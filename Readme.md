@@ -2,6 +2,9 @@
 
 A Streamlit-based application that allows users to upload, manage, and query documents using Google Gemini AI for intelligent document processing and natural language querying.
 
+
+[Quick demo Video](https://drive.google.com/file/d/1J8QgufBw_TYqNzlitv0YGC2hsgYCto7l/view?usp=sharing)
+
 ## 🚀 Features
 
 - **Document Upload & Management**: Upload multiple document formats (PDF, DOCX, TXT, etc.)

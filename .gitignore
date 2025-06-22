@@ -1,0 +1,16 @@
+# Ignore environment variables
+.env
+
+# Ignore virtual environment folder
+multimodel_venv/
+
+# Ignore generated document storage
+document_storage/
+
+# (Optional) Common Python ignores
+__pycache__/
+*.py[cod]
+*.log
+*.sqlite3
+.DS_Store
+*.egg-in*
